@@ -41,9 +41,6 @@ operations = {
 				declare_war_on = { target = FRA type = annex_everything }
 				remove_ideas = ITA_neutrality_idea
 			}		
-			GER = {
-				add_to_faction = ITA
-			}
 		}
 	}
 	
@@ -300,7 +297,7 @@ political_actions = {
 
 		available = {
 			has_army_experience > 299
-			has_completed_focus = ITA_modernized_army
+			has_completed_focus = ITA_army_reorganization
 		}
 
 		cost = 25
@@ -341,5 +338,313 @@ political_actions = {
 		}		
 	}
 	
-	
+
+	ITA_reorganize_levant = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_reorganize_middle_east
+			}
+			
+		available = {
+			has_full_control_of_state = 680
+			has_full_control_of_state = 677
+			has_full_control_of_state = 554
+			has_full_control_of_state = 553
+			has_full_control_of_state = 455
+			has_full_control_of_state = 454
+		}
+		highlight_states = {
+			state = 680
+			state = 677
+			state = 554
+			state = 553
+			state = 455
+			state = 454
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = 75000
+			SYR = {
+			add_state_core = 553
+			}
+			PAL = {
+			add_state_core = 455
+			}
+			release_puppet_on_controlled = SYR
+			release_puppet_on_controlled = PAL
+			puppet = IRQ
+		}
+		
+	}	
+
+
+	ITA_arabian_protectorates = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_reorganize_middle_east
+			}
+			
+		available = {
+			has_full_control_of_state = 656
+			has_full_control_of_state = 765
+			has_full_control_of_state = 658
+			has_full_control_of_state = 294
+			has_full_control_of_state = 659
+		}
+		highlight_states = {
+			state = 656
+			state = 765
+			state = 658
+			state = 294
+			state = 659
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_manpower = 20000
+			puppet = SAU
+			puppet = YEM
+			hidden_effect = {
+			SAU = { 
+			set_popularities = {
+				democratic = 0
+				neutrality = 80
+				fascism = 20
+				communism = 0
+					}
+			set_politics = {
+				ruling_party = neutrality
+					}
+				}
+			YEM = { 
+			set_popularities = {
+				democratic = 0
+				neutrality = 80
+				fascism = 20
+				communism = 0
+					}
+			set_politics = {
+				ruling_party = neutrality
+					}
+				}
+			}		
+		}	
+	}
+
+	ITA_order_albania = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}		
+		visible = {
+			has_completed_focus = ITA_maitain_order
+			}
+			
+		available = {
+			has_full_control_of_state = 44
+			has_full_control_of_state = 915
+			has_full_control_of_state = 912
+		}
+		highlight_states = {
+			state = 44
+			state = 915
+			state = 912
+
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			44 = {
+				add_compliance = 10
+				}
+			915 = {
+				add_compliance = 10
+				}
+			912 = {
+				add_compliance = 20
+				}				
+			}		
+		}	
+
+	ITA_order_dalmatia = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_maitain_order
+			}
+			
+		available = {
+			has_full_control_of_state = 103
+		}
+		highlight_states = {
+			state = 103
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			103 = {
+				add_compliance = 10
+				}				
+			}		
+		}
+		
+	ITA_order_tunisia = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_maitain_order
+			}
+			
+		available = {
+			has_full_control_of_state = 458
+		}
+		highlight_states = {
+			state = 458
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			458 = {
+				add_compliance = 10
+				}				
+			}		
+		}		
+		
+	ITA_order_savoy = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_maitain_order
+			}
+			
+		available = {
+			has_full_control_of_state = 735
+		}
+		highlight_states = {
+			state = 735
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			735 = {
+				add_compliance = 10
+				}				
+			}		
+		}
+
+	ITA_core_nice = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_maitain_order
+			has_full_control_of_state = 798
+			}
+			
+		available = {
+			owns_state = 798
+		}
+		highlight_states = {
+			state = 798
+		}
+		
+		cost = 100
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 250
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			ITA = {
+				add_state_core = 798
+				}				
+			}		
+		}
+		
+	ITA_core_corsica = {
+		
+		icon = generic_operation
+		allowed = {
+			tag = ITA
+		}
+		visible = {
+			has_completed_focus = ITA_maitain_order
+			has_full_control_of_state = 1
+			}
+			
+		available = {
+			owns_state = 1
+		}
+		highlight_states = {
+			state = 1
+		}
+		
+		cost = 100
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 250
+		
+		fire_only_once = yes
+		
+		remove_effect = {
+			ITA = {
+				add_state_core = 1
+				}				
+			}		
+		}		
+
 }
