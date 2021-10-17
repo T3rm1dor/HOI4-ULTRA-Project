@@ -800,6 +800,80 @@ country_event = {
 	}
 }
 
+#initial event - Italy sends ultimatum to Turkey
+country_event = {
+	id = italy.200
+	title = ita_ultimatum_turkey_1.t
+	desc = ita_ultimatum_turkey_1.desc
+	picture = GFX_report_event_fascist_speech
+	is_triggered_only = yes
+	option = {
+		name = ita_ultimatum_turkey_1.a #agree
+		ai_chance = {
+			factor = 50
+		}
+		FROM = {
+			country_event = italy.201
+		}
+		effect_tooltip = {
+			FROM = {
+				puppet = PREV
+			}
+		}
+	}
+
+	option = {
+		name = ita_ultimatum_turkey_1.b #refuse
+		ai_chance = {
+			factor = 50
+		}
+		FROM = {
+			country_event = italy.202
+		}
+		effect_tooltip = {
+			create_wargoal = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+# rasponse event for Italy - country agrees
+country_event = {
+	id = italy.201
+	title = ita_ultimatum_turkey_2.t
+	desc = ita_ultimatum_turkey_2.desc
+	Picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	option = {
+		name = ita_ultimatum_turkey_2.a #agree
+		ai_chance = {
+			factor = 100
+		}
+		puppet = FROM
+	}
+}
+#response event for Italy - country refuses
+country_event = {
+	id = italy.202
+	title = ita_ultimatum_turkey_3.t
+	desc = ita_ultimatum_turkey_3.desc
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+	option = {
+		name = ita_ultimatum_turkey_3.a #agree
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+
 
 
 
