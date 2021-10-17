@@ -13,13 +13,15 @@ set_stability = 0.6
 set_war_support = 0.5
 add_ideas = {
 	victor_emmanuel
-	vittoria_mutilata
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
 	ITA_army_corruption_1
 	ITA_inefficient_economy_2
 	military_service
+	ITA_crippled_economy_3
+	ITA_neutrality_idea
+	ITA_radar_maluses
 }
 
 
