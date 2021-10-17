@@ -453,7 +453,7 @@ ideas = {
 			picture = usa_magic
 			
 			research_bonus = {
-				radar_tech = -1.5
+				radar_tech = -0.97
 			}
 		}		
 }
