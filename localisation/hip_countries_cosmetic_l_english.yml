@@ -1172,6 +1172,9 @@
  HRE_UNIFIED_fascism_ADJ:0 "Roman"
  HRE_UNIFIED_democratic_ADJ:0 "Roman"
  HRE_UNIFIED_communist_ADJ:0 "Roman"
+ ITE_fascism:0 "Italian Empire"
+ ITE_fascism_ADJ:0 "Imperial Italian"
+ ITE_fascism_DEF:0 "The Empire of Italy"
  
  CHI_JAP_fascism_autonomy_puppet:0 "China"
  CHI_JAP_fascism_autonomy_reichsprotectorate:0 "China"
