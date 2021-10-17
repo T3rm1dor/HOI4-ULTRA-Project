@@ -118,14 +118,14 @@ bookmarks = {
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				vittoria_mutilata
 				victor_emmanuel
+				ITA_inefficient_economy_2
 				ITA_army_corruption_1
 			}	
 			focuses = {
-				ITA_victoryinETH
-				ITA_pact_of_steel				
-				ITA_greece_war_goal
+				ITA_pact_of_steel
+				ITA_invade_egypt				
+				ITA_italian_empire
 			}		
 		}
 		"JAP"={
