@@ -302,7 +302,6 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 450
 			add_state_core = 448
-			add_political_power = -150
 		}
 	}	
 
@@ -770,7 +769,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			unlock_decision_tooltip = ITA_army_reorganization
+			custom_effect_tooltip = ITA_army_corruption_tt
 			}
 		}	
 	
@@ -1120,6 +1119,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+		custom_effect_tooltip = ITA_german_doctrines_tt
+		hidden_effect = {
 IF = {
      limit = {
             GER = {
@@ -1360,6 +1361,7 @@ IF = {
      }
 }
 			}
+			}
 		}
 		
 
@@ -1404,26 +1406,25 @@ IF = {
 	focus = {
 		id = ITA_dockyard_expansion
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = ITA_europe_oil
 		cost = 10
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = Construction_Focus_tt
-			unlock_decision_tooltip = { decision = ITA_mare_nostrum_decision show_effect_tooltip = yes }
+			custom_effect_tooltip = ITA_dockyard_construction_tt
 		}
 	}
 
 	focus = {
 		id = ITA_improved_gunnery
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = ITA_dockyard_expansion }
+		prerequisite = { focus = ITA_modernise_fleet }		
 		x = 0
 		y = 1
-		relative_position_id = ITA_dockyard_expansion
+		relative_position_id = ITA_modernise_fleet 
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1448,26 +1449,24 @@ IF = {
 	focus = {
 		id = ITA_modernise_fleet
 		icon = GFX_focus_generic_navy_battleship2
-		prerequisite = { focus = ITA_improved_gunnery }
-		x = 0
-		y = 1
-		relative_position_id = ITA_improved_gunnery
+		x = 4
+		y = 0
+		relative_position_id = ITA_dockyard_expansion
 		cost = 10
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			navy_experience = 50
-			custom_effect_tooltip = Construction_Focus_tt
-			unlock_decision_tooltip = { decision = ITA_atlantic_fleet_decision show_effect_tooltip = yes }
+
 			}
 		}
 
 	focus = {
 		id = ITA_supermarina
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = ITA_modernise_fleet }
-		x = 0
+		prerequisite = { focus = ITA_modernise_fleet focus = ITA_dockyard_expansion }
+		x = -2
 		y = 1
 		relative_position_id = ITA_modernise_fleet
 		cost = 10
@@ -1487,10 +1486,10 @@ IF = {
 	focus = {
 		id = ITA_radar_funding
 		icon = GFX_goal_generic_radar
-		prerequisite = { focus = ITA_modernise_fleet }
-		x = -2
+		prerequisite = { focus = ITA_supermarina}
+		x = 2
 		y = 1
-		relative_position_id = ITA_modernise_fleet
+		relative_position_id = ITA_supermarina
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1512,7 +1511,7 @@ IF = {
 		id = ITA_carrier_conversion
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = ITA_supermarina }
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = ITA_supermarina
 		cost = 10
@@ -1527,33 +1526,35 @@ IF = {
 			army_experience = 5
 			}
 	}
-
+	
 	focus = {
-		id = ITA_secure_mediterranean
-		icon = GFX_goal_generic_build_navy
-		x = 2
-		y = 0
-		relative_position_id = ITA_dockyard_expansion
+		id = ITA_carrier_aircraft
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = ITA_carrier_conversion }
+		prerequisite = { focus = ITA_modern_fighters}
+		x = 0
+		y = 1
+		relative_position_id = ITA_carrier_conversion
 		cost = 10
 
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1.0
-				uses = 1
-				category = convoy_defense_tree
+				uses = 2
+				category = naval_air
 			}
-		}
-	}
+			}
+	}	
+
 
 	focus = {
 		id = ITA_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = ITA_secure_mediterranean }
+		prerequisite = { focus = ITA_dockyard_expansion focus = ITA_supermarina}
 		x = 0
-		y = 1
-		relative_position_id = ITA_secure_mediterranean
+		y = 2
+		relative_position_id = ITA_dockyard_expansion
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1571,10 +1572,10 @@ IF = {
 	focus = {
 		id = ITA_escort_effort
 		icon = GFX_focus_generic_destroyer
-		prerequisite = { focus = ITA_secure_mediterranean }
-		x = 2
+		prerequisite = { focus = ITA_dockyard_expansion }
+		x = -2
 		y = 1
-		relative_position_id = ITA_secure_mediterranean
+		relative_position_id = ITA_dockyard_expansion
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1585,6 +1586,12 @@ IF = {
 				bonus = 1.0
 				uses = 2
 				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = convoy_defense_tree
 			}
 		}
 	}
@@ -1620,7 +1627,7 @@ IF = {
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = ITA_submarine_effort }
 		x = 0
-		y = 3
+		y = 1
 		relative_position_id = ITA_submarine_effort
 		cost = 10
 
@@ -1652,8 +1659,8 @@ IF = {
 		id = ITA_atlantic_fleet2
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = ITA_join_atlantic }
-		prerequisite = { focus = ITA_carrier_conversion }
-		x = 0
+		prerequisite = { focus = ITA_supermarina }
+		x = 2
 		y = 1
 		relative_position_id = ITA_join_atlantic
 		cost = 10
@@ -1669,6 +1676,12 @@ IF = {
 				uses = 1
 				category = naval_doctrine
 			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = cv_tech		
+			}			
 		}
 	}
 
@@ -1678,7 +1691,7 @@ IF = {
 		icon = GFX_goal_generic_build_airforce
 		x = 6
 		y = 0
-		relative_position_id = ITA_secure_mediterranean
+		relative_position_id = ITA_modernise_fleet
 		cost = 10
 
 		available_if_capitulated = yes
@@ -1693,7 +1706,7 @@ IF = {
 		id = ITA_doctrinal_innovation
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = ITA_record_breaking }
-		x = -2
+		x = 2
 		y = 1
 		relative_position_id = ITA_record_breaking
 		cost = 10
@@ -1740,8 +1753,8 @@ IF = {
 		id = ITA_modern_fighters
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = ITA_record_breaking }
-		x = 0
-		y = 1
+		x = -2
+		y = 2
 		relative_position_id = ITA_record_breaking
 		cost = 10
 
@@ -1783,7 +1796,7 @@ IF = {
 		id = ITA_improved_bombers
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = ITA_record_breaking }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = ITA_record_breaking
 		cost = 10
@@ -2136,8 +2149,11 @@ IF = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = {
-			ITA_defeatism
+		custom_effect_tooltip = ITA_credibility_lost
+			hidden_effect = {
+				add_ideas = {
+					ITA_defeatism
+				}
 			}
 		}
 	}
@@ -2403,7 +2419,7 @@ IF = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+		custom_effect_tooltip = ITA_ambition_success
 			}
 	}
 
@@ -2483,7 +2499,7 @@ IF = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		#tooltip decision ME
+		custom_effect_tooltip = ITA_mid_east
 		}
 	}
 
@@ -2518,7 +2534,7 @@ IF = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		#tooltip decisions conmpliance
+		custom_effect_tooltip = ITA_order
 			}
 		}
 	}
