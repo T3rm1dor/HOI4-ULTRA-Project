@@ -61,7 +61,7 @@
  ITA_study_equipment_desc:0 ""
  ITA_simplify_firearms:0 "Simplify our Firearms"
  ITA_simplify_firearms_desc:0 "" 
- ITA_dockyard_expansion:0 "Dockyard Expansion"
+ ITA_dockyard_expansion:0 "Dockyard Expansions"
  ITA_dockyard_expansion_desc:0 "" 
  ITA_improved_gunnery:0 "Improved Gunnery"
  ITA_improved_gunnery_desc:0 "" 
@@ -73,6 +73,8 @@
  ITA_radar_funding_desc:0 ""
  ITA_carrier_conversion:0 "Carrier Conversions"
  ITA_carrier_conversion_desc:0 ""
+ ITA_carrier_aircraft:0 "Aircrafts for our Carrier"
+ ITA_carrier_aircraft_desc:0 "Aircrafts for our Carrier" 
  ITA_secure_mediterranean:0 "Secure the Mediterranean Sea"
  ITA_secure_mediterranean_desc:0 ""
  ITA_submarine_effort:0 "Submarine Effort"
@@ -159,11 +161,14 @@
  ITA_maitain_order_desc:0 "Maintain Order"
  
  
- 
- 
- 
- 
- 
+ #tooltips
+ ITA_german_doctrines_tt:0 "We will get bonuses on every §YBewegungskrieg doctrine§! already researched by §YGermany§!."
+ ITA_army_corruption_tt:0 "We will unlock decisions to improve our military and get rid of the §Gweak army§! we're known for to the cost of §Rarmy experience§!. "
+ ITA_dockyard_construction_tt:0 "§YThis will unlock a series of decision to build§! §Gdockyards§!. §RKeep in mind those will have a temporary cost including civilian factories, political power and a modifier slowing the production of our ships. This also will require us to have fixed our economy§!"
+ ITA_mid_east:0 "We will reorganize the Middle East under our rule and try to gather support while recruiting at the same time amongst tha Arabs."
+ ITA_order:0 "This will unlock decision to work with the existing Italian population in newly acquired territory to try to integrate them into our empire."
+ ITA_credibility_lost:0 "§RWe failed in accomplishing our goals and looked like fools§!, §Yboth to the world and ourselves, severe mesure will need to be taken if we want to ensure our ability to keep on fighting the war.§!"
+ ITA_ambition_success:0 "§GWe succeded in accomplishing our goals and showed everyone our might§!, §Ythe time has come to now create an empire whose glory shall surpass the old empires from the past.§!
  
  
  

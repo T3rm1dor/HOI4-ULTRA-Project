@@ -1021,3 +1021,27 @@
  purchases_hide:0 "Hide Equipment Purchases"
  armed_neutrality:0 "Armed Neutrality"
  armed_neutrality_desc:0 "To get peace, prepare war"
+ ITA_reorganize_levant:0 "Reorganize the Arab states in the Levant"
+ ITA_reorganize_levant_desc:0 "Now that the Levant is firmly in our grasp, we can reward our allies in the region by freeing them from the British rule. While this would mean letting them keep some autonomy, it would also free some manpower, and even allow us to recruit amongst the enemy of the British living there."
+ ITA_arabian_protectorates:0 "Establish Protectorates over Arabia"
+ ITA_arabian_protectorates_desc:0 "We have now fully expelled the British from the Arabian peninsula, the time has come to establish protectorates over the last arabian states to ensure the safe transit of our forces towards the south."
+ ITA_order_albania:0 "Use the Albania national sentiment"
+ ITA_order_albania_desc:0 "Our presence in Albania is still not accepted by all its inhabitants, by exapnding the administrativ borders of Albania to encompass all of the Albanian inhabited lands, we could get some support from nationalists in Albania."
+ ITA_order_tunisia:0 "Work with the Tunisian Italian communities"
+ ITA_order_tunisia_desc:0 "Tunisia already has seizeable communities of Italian settlers, even more than the one from the French. By working with them, we could certainly reduce the tensions with the natives."
+ ITA_order_savoy:0 "Help establish order in Savoy" 
+ ITA_order_savoy_desc:0 "Savoy is usually host to large numbers of Italian immigrants, despite the departure of some of them due to the war, we can still count on some local support."
+ ITA_core_nice:0 "Integrate Nice into Italy proper"
+ ITA_core_nice_desc:0 "With almost a third of the population being Italian, it would only be a matter of time for us to integrate Nice into Italy proper if we were to develop the local administrations and invite some more settlers. "
+ ITA_core_corsica:0 "Integrate Corsica into Italy proper"
+ ITA_core_corsica_desc:0 "Corsican nationalism always had links with our own irredentism, by integrating the island into our administration, we could finally achieve the unity of all the Italian people."
+ ITA_dockyard_expansion_decision:1 "Dockyard Expansion"
+ ITA_dockyard_expansion_decision_desc:1 "If Italy is to be a great power, it will need a navy. Let's start a program of expansion of our dockyards. "
+ ITA_dockyard_expansion2_decision:1 "Dockyard Expansion"
+ ITA_dockyard_expansion2_decision:1 "It is time for us to complete our dockyard expansion program, let's be proud of what we achieved in such a short amount of time and now focus on building those new ships."
+ 
+
+
+
+
+
