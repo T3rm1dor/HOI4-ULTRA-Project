@@ -114,7 +114,7 @@ NDefines.NResistance.MAX_GARRISON_RATIO_WE_AGREE_TO_SUPPORT = 0.3 --3.0	-- The p
 
 NDefines.NResistance.SUPPRESSION_NEEDED_BY_RESISTANCE_POINT = 0.5 --0.75 -- Number of suppression point we need for each 1% of resistance
 
-NDefines.NResistance.	COMPLIANCE_GROWTH_HAS_CLAIM = 10 --5 -- compliance growth buff if state has a claim
+NDefines.NResistance.COMPLIANCE_GROWTH_HAS_CLAIM = 10 --5 -- compliance growth buff if state has a claim
 NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.05 -- 0.075 -- base compliance grow
 NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.05 -- 0.075 -- base compliance grow
 NDefines.NResistance.COMPLIANCE_DECAY_AT_MAX_COMPLIANCE = -0.055 -- -0.083 -- as compliance increases, it gets a decay rate depending on its value. compliance should stabilize at some value until its growth chWanges
@@ -217,7 +217,7 @@ NDefines.NBuildings.RADAR_RANGE_MIN = 15				-- Radar range (from state center to
 NDefines.NBuildings.RADAR_RANGE_MAX = 120				-- Range is interpolated between building levels 1-15.
 NDefines.NBuildings.RADAR_INTEL_EFFECT = 30			-- Province covered by radar increases intel by 10 (where 255 is max). Province may be covered by multiple radars, then the value sums up.
 NDefines.SABOTAGE_FACTORY_DAMAGE = 75.0		-- How much damage takes a factory building in sabotage when state is occupied. Damage is mult by (1 + resistance strength), i.e. up to 2 x base value.	
-NDefines.	INFRASTRUCTURE_RESOURCE_BONUS = 0.1 --0.2-- multiplicative resource bonus for each level of (non damaged) infrastructure
+NDefines.INFRASTRUCTURE_RESOURCE_BONUS = 0.1 --0.2-- multiplicative resource bonus for each level of (non damaged) infrastructure
 
 
 
