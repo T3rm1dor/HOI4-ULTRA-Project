@@ -39,19 +39,48 @@ equipments = {
 		build_cost_ic = 0.41
 		resources = {
 			steel = 1
-			#iron = 1
-			#coal = 1
 		}
-		
-		upgrades = {
-			event_cost_reduction_upgrade
-			event_cost_increase_upgrade
-			event_soft_attack_upgrade
-			event_hard_attack_upgrade
-			event_defense_upgrade
-			event_breakthrough_upgrade
-			event_piercing_upgrade
-			event_reliability_upgrade
+
+
+		module_slots = {
+			leader_slot = {
+				required = yes
+				allowed_module_categories = {
+					infantry_squad_man
+				}
+			}
+			man_1_slot = {
+				required = yes
+				allowed_module_categories = {
+					infantry_squad_man
+				}
+			}
+			man_2_slot = {
+				required = no
+				allowed_module_categories = {
+					infantry_squad_man
+				}
+			}
+			man_3_slot = {
+				required = no
+				allowed_module_categories = {
+					infantry_squad_man
+				}
+			}
+			man_4_slot = {
+				required = no
+				allowed_module_categories = {
+					infantry_squad_man
+				}
+			}
+		}
+
+		default_modules = {
+			leader_slot = infantry_bolt_action_rifle
+			man_1_slot = infantry_bolt_action_rifle
+			man_2_slot = empty
+			man_3_slot = empty
+			man_4_slot = empty
 		}
 		
 	}
@@ -81,6 +110,8 @@ equipments = {
 			iron = 1
 			#coal = 1
 		}
+
+		module_slots = inherit
 	}
 	
 	ghost_infantry_equipment_0 = {
@@ -101,6 +132,8 @@ equipments = {
 		priority = 05
 		parent = ghost_infantry_equipment_0
 		visual_level = 0
+
+		module_slots = inherit
 	}
 
 	ghost_infantry_equipment_1 = {
@@ -139,6 +172,8 @@ equipments = {
 			#iron = 1
 			#coal = 1
 		}
+
+		module_slots = inherit
 	}
 	
 	ghost_infantry_equipment_2 = {
@@ -177,6 +212,8 @@ equipments = {
 			#iron = 1
 			#coal = 1
 		}
+
+		module_slots = inherit
 	}
 	
 	ghost_infantry_equipment_3 = {
@@ -258,6 +295,8 @@ equipments = {
 			#iron = 1
 			#coal = 1
 		}
+
+		module_slots = inherit
 	}
 	
 	heavy_infantry_equipment = {

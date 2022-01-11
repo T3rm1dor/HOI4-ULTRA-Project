@@ -21,6 +21,12 @@ technologies = {
 		enable_subunits = {
 			infantry
 		}
+
+		enable_equipment_modules = {
+			infantry_bolt_action_rifle
+			infantry_semi_auto_rifle
+			infantry_hmg
+		}
 		
 		path = {
 			leads_to_tech = infantry_weapons1
